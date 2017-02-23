@@ -1,0 +1,18 @@
+# Set up OMERO public web user
+
+- hosts: localhost
+
+  roles:
+  - omero-user
+
+  vars:
+  - omero_group_create:
+    - name: demo
+      type: read-only
+  - omero_user_create:
+    - login: public
+      firstname: public
+      lastname: user
+      password: public
+      groups: "--group-name demo"
+      force: True
