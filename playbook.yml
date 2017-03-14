@@ -1,0 +1,34 @@
+# Install OMERO.server and OMERO.web with a public user on localhost
+
+- hosts: all
+  roles:
+
+    - role: openmicroscopy.omero-server
+      postgresql_users_databases:
+      - user: omero
+        password: omero
+        databases: [omero]
+      omero_server_release: 5.3.0-m9
+      #omero_server_upgrade: True
+
+    - role: openmicroscopy.omero-web
+      omero_web_prestart_file: files/omero-web-public.j2
+
+    # This role only works on OMERO 5.3+
+    - role: omero-user
+      omero_user_bin_omero: /opt/omero/server/OMERO.server/bin/omero
+      omero_user_system: omero
+      omero_user_admin_user: root
+      omero_user_admin_pass: omero
+      omero_group_create:
+      - name: demo
+        type: read-only
+      omero_user_create:
+      - login: public
+        firstname: public
+        lastname: user
+        password: "{{ omero_web_public_password }}"
+        groups: "--group-name demo"
+
+  vars:
+    omero_web_public_password: public
