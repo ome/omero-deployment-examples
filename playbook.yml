@@ -3,16 +3,23 @@
 - hosts: all
   roles:
 
-    - role: openmicroscopy.omero-server
+    - role: openmicroscopy.postgresql
       postgresql_users_databases:
       - user: omero
         password: omero
         databases: [omero]
+
+    - role: openmicroscopy.omero-server
       omero_server_release: 5.3.0-m9
-      #omero_server_upgrade: True
 
     - role: openmicroscopy.omero-web
-      omero_web_prestart_file: files/omero-web-public.j2
+      omero_web_release: 5.3.0-m9
+      omero_web_config_set:
+        omero.web.public.enabled: True
+        omero.web.public.server_id: 1
+        omero.web.public.user: public
+        omero.web.public.password: "{{ omero_web_public_password }}"
+        omero.web.public.url_filter: "^/(webadmin/myphoto/|webclient/(?!(action|annotate_(file|tags|comment|rating|map)|script_ui|ome_tiff|figure_script))|webgateway/(?!(archived_files|download_as)))"
 
     # This role only works on OMERO 5.3+
     - role: omero-user
@@ -32,3 +39,4 @@
 
   vars:
     omero_web_public_password: public
+    postgres_version: "9.6"
