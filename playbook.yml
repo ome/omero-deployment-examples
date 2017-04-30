@@ -24,7 +24,7 @@
     # This role only works on OMERO 5.3+
     - role: omero-user
       omero_user_bin_omero: /opt/omero/server/OMERO.server/bin/omero
-      omero_user_system: omero
+      omero_user_system: omero-server
       omero_user_admin_user: root
       omero_user_admin_pass: omero
       omero_group_create:

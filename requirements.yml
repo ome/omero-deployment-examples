@@ -10,7 +10,7 @@
 
 - name: openmicroscopy.omero-server
   src:  https://github.com/manics/ansible-role-omero-server.git
-  version: devel
+  version: devel-20170405
 
 - name: openmicroscopy.omero-web
   src:  https://github.com/manics/ansible-role-omero-web.git
