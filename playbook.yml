@@ -39,4 +39,4 @@
 
   vars:
     omero_web_public_password: public
-    postgres_version: "9.6"
+    postgresql_version: "9.6"
