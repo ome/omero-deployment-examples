@@ -17,8 +17,6 @@ ansible:
   host_vars:
     omero-server:
       omero_server_systemd_require_network: False
-  verbose: True
-  diff: True
 
 verifier:
   name: testinfra
