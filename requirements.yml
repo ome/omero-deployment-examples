@@ -13,3 +13,5 @@
 - name: openmicroscopy.omero-web
 
 - name: omero-user
+  src:  https://github.com/openmicroscopy/ansible-role-omero-user.git
+  # TODO: workaround for missing owner
