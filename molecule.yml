@@ -14,7 +14,7 @@ vagrant:
     - name: virtualbox
       type: virtualbox
       options:
-        memory: 512
+        memory: 2048
         cpus: 1
   instances:
     - name: omero-server
