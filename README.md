@@ -10,6 +10,6 @@ likely you will want to copy the configuration into your own playbooks.
 
 ### Quick start ###
 
-- Install `ansible` and `ansible-galaxy`: e.g. `pip install ansible ansible-galaxy`
+- Install `ansible`: e.g. `pip install ansible`
 - Install roles: `ansible-galaxy install -r requirements.yml -p roles`
 - Install OMERO server and setup public user: `ansible-playbook playbook.yml`
