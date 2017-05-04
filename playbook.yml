@@ -17,7 +17,8 @@
         omero.web.public.server_id: 1
         omero.web.public.user: public
         omero.web.public.password: "{{ omero_web_public_password }}"
-        omero.web.public.url_filter: "^/(webadmin/myphoto/|webclient/(?!(action|annotate_(file|tags|comment|rating|map)|script_ui|ome_tiff|figure_script))|webgateway/(?!(archived_files|download_as)))"
+        omero.web.public.url_filter: "^/(webadmin/myphoto/|webclient/(?!(action|logout|annotate_(file|tags|comment|rating|map)|script_ui|ome_tiff|figure_script))|webgateway/(?!(archived_files|download_as)))"
+
 
     # This role only works on OMERO 5.3+
     - role: omero-user
