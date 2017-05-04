@@ -6,6 +6,19 @@ dependency:
 driver:
   name: docker
 
+vagrant:
+  platforms:
+    - name: centos7
+      box: centos/7
+  providers:
+    - name: virtualbox
+      type: virtualbox
+      options:
+        memory: 2048
+        cpus: 1
+  instances:
+    - name: omero-server
+
 docker:
   containers:
   - name: omero-server
@@ -17,8 +30,6 @@ ansible:
   host_vars:
     omero-server:
       omero_server_systemd_require_network: False
-  verbose: True
-  diff: True
 
 verifier:
   name: testinfra
