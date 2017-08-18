@@ -1,6 +1,7 @@
 ---
 
 - src: openmicroscopy.postgresql
+  version: 2.0.0
 
 - name: openmicroscopy.omero-common
   src:  https://github.com/openmicroscopy/ansible-role-omero-common.git
