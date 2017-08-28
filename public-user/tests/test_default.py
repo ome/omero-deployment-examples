@@ -9,7 +9,7 @@ OMERO = '/opt/omero/web/OMERO.web/bin/omero'
 
 def test_omero_web_public(Command):
     out = Command.check_output(
-        'curl http://localhost/webclient/api/containers/')
+        'curl -f http://localhost/webclient/api/containers/')
     r = json.loads(out)
     assert r['screens'] == []
     assert r['plates'] == []
