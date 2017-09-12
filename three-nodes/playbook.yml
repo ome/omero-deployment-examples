@@ -1,0 +1,38 @@
+# Two node deployment:
+# - PostgreSQL database
+# - OMERO.server
+# - OMERO.web
+
+- hosts: omero-database
+  roles:
+    - role: openmicroscopy.postgresql
+
+  vars:
+    postgresql_server_listen: "'*'"
+    postgresql_server_auth:
+    - database: omero
+      user: omero
+      address: 0.0.0.0/0
+    postgresql_users_databases:
+    - user: omero
+      password: omero
+      databases: [omero]
+    postgresql_version: "9.6"
+
+
+- hosts: omero-server
+  roles:
+    - role: openmicroscopy.omero-server
+
+  vars:
+    omero_server_dbhost: "{{ hostvars['omero-database'].ansible_eth0.ipv4.address }}"
+
+
+- hosts: omero-web
+  roles:
+    - role: openmicroscopy.omero-web
+
+  vars:
+    omero_web_config_set:
+      omero.web.server_list:
+        - ["{{ hostvars['omero-server'].ansible_eth0.ipv4.address }}", 4064, omero]

@@ -1,0 +1,30 @@
+---
+dependency:
+  name: galaxy
+  requirements_file: ../requirements.yml
+
+driver:
+  name: docker
+
+docker:
+  containers:
+  - name: omero-database
+    image: openmicroscopy/centos-systemd-ip
+    image_version: latest
+    privileged: True
+  - name: omero-server
+    image: openmicroscopy/centos-systemd-ip
+    image_version: latest
+    privileged: True
+  - name: omero-web
+    image: openmicroscopy/centos-systemd-ip
+    image_version: latest
+    privileged: True
+
+ansible:
+  host_vars:
+    omero-server:
+      omero_server_systemd_require_network: False
+
+verifier:
+  name: testinfra

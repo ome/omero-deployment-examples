@@ -12,3 +12,4 @@ script:
 
 env:
   - PLAYBOOKDIR=public-user
+  - PLAYBOOKDIR=three-nodes
