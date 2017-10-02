@@ -3,15 +3,17 @@
 - src: openmicroscopy.postgresql
   version: 2.0.0
 
-- name: openmicroscopy.omero-common
-  src:  https://github.com/openmicroscopy/ansible-role-omero-common.git
-  # TODO: workaround for https://github.com/ansible/galaxy-issues/issues/259
+- src: openmicroscopy.omero-common
+  version: 0.3.0
 
 - name: openmicroscopy.omego
+  version: 0.1.0
 
 - name: openmicroscopy.omero-server
+  version: 2.0.0-m4
 
 - name: openmicroscopy.omero-web
+  version: 1.0.0-m3
 
 - name: omero-user
   src:  https://github.com/openmicroscopy/ansible-role-omero-user.git
