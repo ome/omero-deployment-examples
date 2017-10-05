@@ -1,7 +1,7 @@
 ---
 
 - src: openmicroscopy.postgresql
-  version: 2.0.0
+  version: 3.0.0-m2
 
 - src: openmicroscopy.omero-common
   version: 0.3.0

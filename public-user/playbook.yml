@@ -4,10 +4,13 @@
   roles:
 
     - role: openmicroscopy.postgresql
-      postgresql_users_databases:
+      postgresql_databases:
+      - name: omero
+      postgresql_users:
       - user: omero
         password: omero
         databases: [omero]
+      postgresql_version: "9.6"
 
     - role: openmicroscopy.omero-server
 
@@ -38,4 +41,3 @@
 
   vars:
     omero_web_public_password: public
-    postgresql_version: "9.6"
