@@ -1,0 +1,9 @@
+# Hosts can be part of multiple hostgroups, but note that vars will be
+# read for all groups that the host is a member of
+
+# Training servers
+# [training-server]
+# training-server.openmicroscopy.org
+
+[outreach]
+ome-training-outreach.openmicroscopy.org ansible_host=10.0.17.60
