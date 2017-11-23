@@ -98,3 +98,7 @@
 
   vars:
     omero_web_public_password: public
+    omero_server_config_set:
+      omero.jvmcfg.percent.blitz: 50
+      omero.jvmcfg.percent.indexer: 20
+      omero.jvmcfg.percent.pixeldata: 20
