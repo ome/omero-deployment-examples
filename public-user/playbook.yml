@@ -51,11 +51,11 @@
       become: yes
       pip:
         name:
-        - "omero-figure"
-        - "omero-fpbioimage"
-        - "omero-webtagging-autotag"
-        - "omero-webtagging-tagsearch"
-        - "omero-iviewer"
+        - "omero-figure==3.1.2"
+        - "omero-fpbioimage==0.2.0"
+        - "omero-webtagging-autotag==3.0.2"
+        - "omero-webtagging-tagsearch==3.0.3"
+        - "omero-iviewer==0.3.0"
         editable: False
         state: present
         # variable comes from role openmicroscopy.omero-web
