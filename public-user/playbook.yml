@@ -64,9 +64,28 @@
       notify:
         - restart omero-web
 
+    - name: Create a figure scripts directory
+      become: yes
+      file:
+        path: /opt/omero/server/OMERO.server/lib/scripts/omero/figure_scripts
+        state: directory
+        mode: 0755
+        recurse: yes
+        owner: "omero-server"
+        group: "omero-server"
+
+    - name: Download the Figure_To_Pdf.py script
+      become: yes
+      get_url:
+        url: https://raw.githubusercontent.com/ome/omero-figure/v3.1.2/omero_figure/scripts/omero/figure_scripts/Figure_To_Pdf.py
+        dest: /opt/omero/server/OMERO.server/lib/scripts/omero/figure_scripts/Figure_To_Pdf.py
+        mode: 0755
+        owner: "omero-server"
+        group: "omero-server"
+
     # Config for OMERO.web plugins, loaded into OMERO.web by the
     # omero.web systemd restart.
-    - name:
+    - name: Config for OMERO.web plugins
       become: yes
       template:
         src: omero-web-config-for-webapps.j2
