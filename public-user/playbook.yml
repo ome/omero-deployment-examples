@@ -96,6 +96,17 @@
       notify:
       - restart omero-web
 
+    - name: Set default viewer in OMERO.web
+      become: yes
+      template:
+        src: omero-web-config-default-viewer.j2
+        dest: "{{ omero_web_basedir }}/config/omero-web-config-default-viewer.omero"
+        owner: "root"
+        group: "root"
+        mode: "u=rw,go=r"
+      notify:
+      - restart omero-web
+
   vars:
     omero_web_public_password: public
     omero_server_config_set:
