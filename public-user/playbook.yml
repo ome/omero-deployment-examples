@@ -40,10 +40,10 @@
       postgresql_version: "9.6"
 
     - role: openmicroscopy.omero-server
-      omero_server_release: 5.4.0
+      omero_server_release: 5.4.1
 
     - role: openmicroscopy.omero-web
-      omero_web_release: 5.4.0
+      omero_web_release: 5.4.1
       # omero_web_config_set:
 
   post_tasks:
@@ -55,7 +55,7 @@
         - "omero-fpbioimage==0.2.0"
         - "omero-webtagging-autotag==3.0.2"
         - "omero-webtagging-tagsearch==3.0.3"
-        - "omero-iviewer==0.3.0"
+        - "omero-iviewer==0.4.1"
         editable: False
         state: present
         # variable comes from role openmicroscopy.omero-web
