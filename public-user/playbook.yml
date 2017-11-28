@@ -83,6 +83,27 @@
         owner: "omero-server"
         group: "omero-server"
 
+    - name: Create a Fiji directory
+      become: yes
+      file:
+        path: /opt/omero/server/OMERO.server/Fiji
+        state: directory
+        mode: 0755
+        recurse: yes
+        owner: "omero-server"
+        group: "omero-server"
+
+    - name: Download and unarchive Fiji
+      become: yes
+      unarchive:
+        src: http://downloads.imagej.net/fiji/latest/fiji-linux64.zip
+        dest: /opt/omero/server/OMERO.server/Fiji
+        remote_src: yes
+        mode: 0755
+        owner: "omero-server"
+        group: "omero-server"
+
+
     # Config for OMERO.web plugins, loaded into OMERO.web by the
     # omero.web systemd restart.
     - name: Config for OMERO.web plugins
