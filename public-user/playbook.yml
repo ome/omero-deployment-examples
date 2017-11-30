@@ -96,8 +96,18 @@
     - name: Download the Scipy_Gaussian_Filter.py script
       become: yes
       get_url:
-        url: https://raw.githubusercontent.com/will-moore/omero-user-scripts/cambridge-training/cambridge-training-2017-12/Scipy_Gaussian_Filter.py
+        url: https://raw.githubusercontent.com/jburel/omero-example-scripts/cambridge-training/cambridge-training-2017-12/Scipy_Gaussian_Filter.py
         dest: /opt/omero/server/OMERO.server/lib/scripts/omero/cambridge_scripts/Scipy_Gaussian_Filter.py
+        mode: 0755
+        owner: "omero-server"
+        group: "omero-server"
+        force: yes
+
+    - name: Download the Omero_Imagej_Macro.py script
+      become: yes
+      get_url:
+        url: https://raw.githubusercontent.com/jburel/omero-example-scripts/cambridge-training/cambridge-training-2017-12/Omero_Imagej_Macro.py
+        dest: /opt/omero/server/OMERO.server/lib/scripts/omero/cambridge_scripts/Omero_Imagej_Macro.py
         mode: 0755
         owner: "omero-server"
         group: "omero-server"
@@ -122,6 +132,36 @@
         remote_src: yes
         owner: "omero-server"
         group: "omero-server"
+
+    - name: Download the jar needed for server-side Fiji
+      become: yes
+      get_url:
+        url: http://update.imagej.net/jars/ij-1.51h.jar-20161110033923
+        dest: /opt/omero/Fiji/Fiji.app/jars/ij-1.51n.jar
+        mode: 0755
+        owner: "omero-server"
+        group: "omero-server"
+        force: yes
+
+    - name: Add DropBox folder for trainer-1
+      become: yes
+      file:
+        path: /OMERO/DropBox/trainer-1
+        state: directory
+        mode: 0755
+        recurse: yes
+        owner: "omero-server"
+        group: "omero-server"
+
+    - name: Add DropBox folders for user-1 to user-40
+      become: true
+      file:
+        path: /OMERO/DropBox/{{ item }}
+        state: directory
+        mode: 0775
+        owner: "omero-server"
+        group: "omero-server"
+      with_sequence: start=1 end=40 format=user-%d
 
     # Config for OMERO.web plugins, loaded into OMERO.web by the
     # omero.web systemd restart.
