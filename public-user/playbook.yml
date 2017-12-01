@@ -103,46 +103,6 @@
         group: "omero-server"
         force: yes
 
-    - name: Download the Omero_Imagej_Macro.py script
-      become: yes
-      get_url:
-        url: https://raw.githubusercontent.com/jburel/omero-example-scripts/cambridge-training/cambridge-training-2017-12/Omero_Imagej_Macro.py
-        dest: /opt/omero/server/OMERO.server/lib/scripts/omero/cambridge_scripts/Omero_Imagej_Macro.py
-        mode: 0755
-        owner: "omero-server"
-        group: "omero-server"
-        force: yes
-
-    - name: Create a Fiji directory
-      become: yes
-      file:
-        path: /opt/omero/Fiji
-        state: directory
-        mode: 0755
-        recurse: yes
-        owner: "omero-server"
-        group: "omero-server"
-
-    - name: Download and unarchive Fiji
-      become: yes
-      unarchive:
-        src: http://downloads.imagej.net/fiji/latest/fiji-linux64.zip
-        dest: /opt/omero/Fiji
-        creates: /opt/omero/Fiji/Fiji.app
-        remote_src: yes
-        owner: "omero-server"
-        group: "omero-server"
-
-    - name: Download the jar needed for server-side Fiji
-      become: yes
-      get_url:
-        url: http://update.imagej.net/jars/ij-1.51h.jar-20161110033923
-        dest: /opt/omero/Fiji/Fiji.app/jars/ij-1.51n.jar
-        mode: 0755
-        owner: "omero-server"
-        group: "omero-server"
-        force: yes
-
     - name: Add DropBox folder for trainer-1
       become: yes
       file:
