@@ -16,7 +16,7 @@ Quick start
 Public user
 -----------
 
-This recreates the configuration documented under https://www.openmicroscopy.org/site/support/omero/sysadmins/public.html
+This recreates the configuration documented under https://docs.openmicroscopy.org/latest/omero/sysadmins/public.html
 
 - `cd public-user; ansible-playbook playbook.yml`
 
