@@ -7,10 +7,10 @@
   version: 0.3.0
 
 - name: openmicroscopy.omego
-  version: 0.1.0
+  version: 0.1.1
 
 - name: openmicroscopy.omero-server
-  version: 2.0.0-m4
+  version: 2.0.2
 
 - name: openmicroscopy.omero-web
   version: 1.0.0-m3
