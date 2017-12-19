@@ -1,0 +1,6 @@
+# {{ ansible_managed }}
+# Change OMERO.web configuration
+# after web already installed and running via role
+# so that iviewer is the default viewer
+
+config set omero.web.viewer.view omero_iviewer.views.index
