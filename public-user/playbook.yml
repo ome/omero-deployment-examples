@@ -43,8 +43,12 @@
 
   vars:
     omero_web_public_password: public
-    omero_server_config_set:
-      omero.db.poolsize: 50
-      omero.jvmcfg.percent.blitz: 50
-      omero.jvmcfg.percent.indexer: 20
-      omero.jvmcfg.percent.pixeldata: 20
+    ## PRODUCTION VARIABLES: For a production system,
+    ## remove "_DISABLED" from the following property
+    ## in order to scale up for more users. Disabling
+    ## permits testing on smaller VMs.
+    omero_server_config_set_DISABLED:
+       omero.db.poolsize: 50
+       omero.jvmcfg.percent.blitz: 50
+       omero.jvmcfg.percent.indexer: 20
+       omero.jvmcfg.percent.pixeldata: 20
