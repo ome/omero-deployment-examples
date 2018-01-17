@@ -13,8 +13,10 @@
       postgresql_version: "9.6"
 
     - role: openmicroscopy.omero-server
+      omero_server_release: 5.4.1
 
     - role: openmicroscopy.omero-web
+      omero_web_release: 5.4.1
       omero_web_config_set:
         omero.web.public.enabled: True
         omero.web.public.server_id: 1
@@ -41,3 +43,12 @@
 
   vars:
     omero_web_public_password: public
+    ## PRODUCTION VARIABLES: For a production system,
+    ## remove "_DISABLED" from the following property
+    ## in order to scale up for more users. Disabling
+    ## permits testing on smaller VMs.
+    omero_server_config_set_DISABLED:
+       omero.db.poolsize: 50
+       omero.jvmcfg.percent.blitz: 50
+       omero.jvmcfg.percent.indexer: 20
+       omero.jvmcfg.percent.pixeldata: 20
