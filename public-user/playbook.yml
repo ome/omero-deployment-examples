@@ -13,10 +13,10 @@
       postgresql_version: "9.6"
 
     - role: openmicroscopy.omero-server
-      omero_server_release: 5.4.1
+      omero_server_release: latest
 
     - role: openmicroscopy.omero-web
-      omero_web_release: 5.4.1
+      omero_web_release: latest
       omero_web_config_set:
         omero.web.public.enabled: True
         omero.web.public.server_id: 1
