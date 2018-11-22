@@ -19,8 +19,8 @@ Basics
 ![single node installation of OMERO.web, OMERO.server, and PostgreSQL](images/one-node.png "One-node OMERO")
 
 The above diagram represents the most basic OMERO installation with OMERO.web, OMERO.server, and
-PostgreSQL all installed on the same physical node. This repository shows various ways to add to
-this basic installation, including:
+PostgreSQL all installed on the same physical node. This repository includes ansible and docker
+installation blueprints for this configuration as well as more advanced ones:
 
  * [Public user](#public-user): allow public access to selected data without the need to log in
  * [Three nodes](#three-nodes): use more physical or virtual hardware to scale up your installation

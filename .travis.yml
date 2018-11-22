@@ -11,5 +11,6 @@ script:
   - cd $PLAYBOOKDIR && molecule test
 
 env:
+  - PLAYBOOKDIR=one-node
   - PLAYBOOKDIR=public-user
   - PLAYBOOKDIR=three-nodes

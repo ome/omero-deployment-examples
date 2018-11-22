@@ -1,0 +1,19 @@
+---
+dependency:
+  name: galaxy
+  requirements_file: ../requirements.yml
+
+driver:
+  name: docker
+
+docker:
+  containers:
+  - name: omero-all
+
+ansible:
+  host_vars:
+    omero-server:
+      omero_server_systemd_require_network: False
+
+verifier:
+  name: testinfra

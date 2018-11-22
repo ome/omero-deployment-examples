@@ -1,0 +1,13 @@
+- hosts: omero-all
+  roles:
+    - role: openmicroscopy.postgresql
+      postgresql_databases:
+      - name: omero
+      postgresql_users:
+      - user: omero
+        password: omero
+        databases: [omero]
+      postgresql_version: "9.6"
+    - role: openmicroscopy.omero-server
+      omero_server_rootpassword: ChangeMe
+    - role: openmicroscopy.omero-web
