@@ -1,4 +1,4 @@
-# Two node deployment:
+# Three node deployment:
 # - PostgreSQL database
 # - OMERO.server
 # - OMERO.web
