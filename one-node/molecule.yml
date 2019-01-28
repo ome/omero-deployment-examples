@@ -9,6 +9,9 @@ driver:
 docker:
   containers:
   - name: omero-all
+    image: centos/systemd
+    image_version: latest
+    privileged: True
 
 ansible:
   host_vars:
