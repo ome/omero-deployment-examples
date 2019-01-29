@@ -8,13 +8,13 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     '.molecule/ansible_inventory').get_hosts('omero-all')
 
 
-def test_services_running_and_enabled(Service):
+def test_db_running_and_enabled(Service):
     service = Service('postgresql-9.6')
     assert service.is_running
     assert service.is_enabled
 
 
-def test_services_running_and_enabled(Service):
+def test_srv_running_and_enabled(Service):
     service = Service('omero-server')
     assert service.is_running
     assert service.is_enabled
