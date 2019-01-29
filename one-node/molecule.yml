@@ -9,13 +9,13 @@ driver:
 docker:
   containers:
   - name: omero-all
-    image: centos/systemd
+    image: openmicroscopy/centos-systemd-ip
     image_version: latest
     privileged: True
 
 ansible:
   host_vars:
-    omero-server:
+    omero-all:
       omero_server_systemd_require_network: False
 
 verifier:
