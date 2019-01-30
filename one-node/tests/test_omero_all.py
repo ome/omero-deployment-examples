@@ -23,7 +23,7 @@ def test_srv_running_and_enabled(Service):
 def test_omero_login(Command, Sudo):
     with Sudo('omero-server'):
         Command.check_output(
-            '%s login -C -s localhost -u root -w omero' % OMERO)
+            '%s login -C -s localhost -u root -w ChangeMe' % OMERO)
 
 
 @pytest.mark.parametrize('name', ['omero-web', 'nginx'])
@@ -64,7 +64,7 @@ def test_omero_web_login(Command, File):
     data = '&'.join([
         'csrfmiddlewaretoken=%s' % csrf,
         'username=root',
-        'password=omero',
+        'password=ChangeMe',
         'server=1',
         'url=%2Fwebclient%2F',
         ])
