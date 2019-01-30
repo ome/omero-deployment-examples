@@ -1,0 +1,15 @@
+- hosts: omero-all
+  roles:
+    - role: openmicroscopy.postgresql
+      postgresql_databases:
+      - name: omero
+      postgresql_users:
+      - user: omero
+        password: omero
+        databases: [omero]
+      postgresql_version: "9.6"
+    - role: openmicroscopy.omero-server
+      omero_server_rootpassword: ChangeMe
+      ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl
+    - role: openmicroscopy.omero-web
+      ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl

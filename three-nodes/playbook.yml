@@ -1,4 +1,4 @@
-# Two node deployment:
+# Three node deployment:
 # - PostgreSQL database
 # - OMERO.server
 # - OMERO.web
@@ -25,6 +25,8 @@
 - hosts: omero-server
   roles:
     - role: openmicroscopy.omero-server
+      ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl
+
 
   vars:
     omero_server_dbhost: "{{ hostvars['omero-database'].ansible_eth0.ipv4.address }}"
@@ -33,6 +35,7 @@
 - hosts: omero-web
   roles:
     - role: openmicroscopy.omero-web
+      ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl
 
   vars:
     omero_web_config_set:
