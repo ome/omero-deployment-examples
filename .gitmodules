@@ -1,0 +1,3 @@
+[submodule "docker-example-omero-websockets"]
+	path = docker-example-omero-websockets
+	url = git://github.com/ome/docker-example-omero-websockets.git
