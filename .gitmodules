@@ -1,0 +1,3 @@
+[submodule "ansible-example-omero-onenode"]
+	path = ansible-example-omero-onenode
+	url = git://github.com/ome/ansible-example-omero-onenode.git
