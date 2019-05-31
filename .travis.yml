@@ -16,3 +16,4 @@ env:
   - PLAYBOOKDIR=one-node
   - PLAYBOOKDIR=public-user
   - PLAYBOOKDIR=three-nodes
+  - PLAYBOOKDIR=docker-example-omero-websockets
