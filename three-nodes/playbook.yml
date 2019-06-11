@@ -5,7 +5,7 @@
 
 - hosts: omero-database
   roles:
-    - role: openmicroscopy.postgresql
+    - role: ome.postgresql
 
   vars:
     postgresql_server_listen: "'*'"
@@ -24,7 +24,7 @@
 
 - hosts: omero-server
   roles:
-    - role: openmicroscopy.omero-server
+    - role: ome.omero_server
       ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl
 
 
@@ -34,7 +34,7 @@
 
 - hosts: omero-web
   roles:
-    - role: openmicroscopy.omero-web
+    - role: ome.omero_web
       ice_python_wheel: https://github.com/ome/zeroc-ice-py-centos7/releases/download/0.1.0/zeroc_ice-3.6.4-cp27-cp27mu-linux_x86_64.whl
 
   vars:

@@ -1,20 +1,13 @@
 ---
 
-- src: openmicroscopy.postgresql
-  version: 3.0.0-m2
+- src: ome.postgresql
+  version: 3.1.0
 
-- src: openmicroscopy.omero-common
-  version: 0.3.0
+- src: ome.omero_server
+  version: 2.0.5
 
-- name: openmicroscopy.omego
-  version: 0.1.1
-
-- name: openmicroscopy.omero-server
+- src: ome.omero_web
   version: 2.0.2
 
-- name: openmicroscopy.omero-web
-  version: 1.0.0-m3
-
-- name: omero-user
-  src:  https://github.com/openmicroscopy/ansible-role-omero-user.git
-  # TODO: workaround for missing owner
+- src: ome.omero_user
+  version: 0.1.2
