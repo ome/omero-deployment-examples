@@ -2,7 +2,7 @@
 - name: Prepare all
   hosts: all
   tasks:
-  - name: Install netstat
+  - name: Install iproute
     yum:
       pkg:
         # Required for Ansible network vars, missing from Docker image

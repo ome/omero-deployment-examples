@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: omero-all
+  - name: omero-public
     image: centos/systemd
     image_version: latest
     privileged: true
@@ -19,7 +19,7 @@ provisioner:
     converge: ../../playbook.yml
   inventory:
     host_vars:
-      omero-all:
+      omero-public:
         omero_server_systemd_require_network: false
 
 scenario:
