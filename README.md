@@ -8,13 +8,16 @@ You can copy these and modify them for your own use.
 Quick start
 ===========
 
-- Install `ansible`: e.g. `pip install ansible`
-- Install roles: `ansible-galaxy install -r requirements.yml -p roles`
+- Install Ansible: e.g. `pip install ansible`
 - Install OMERO.server and OMERO.web using one of these playbooks:
 
 
 Basics
 ------
+
+    cd ansible-example-omero-onenode
+    ansible-galaxy install -r requirements.yml
+    ansible-playbook playbook.yml
 
 ![single node installation of OMERO.web, OMERO.server, and PostgreSQL](images/one-node.png "One-node OMERO")
 
@@ -30,7 +33,10 @@ Public user
 
 This recreates the configuration documented under https://docs.openmicroscopy.org/latest/omero/sysadmins/public.html
 
-- `cd public-user; ansible-playbook playbook.yml`
+
+    cd ansible-role-omero-public-user
+    ansible-galaxy install -r requirements.yml
+    ansible-playbook playbook.yml
 
 ![single node installation with public user enabled](images/public-user.png "OMERO with public-user")
 
@@ -39,10 +45,8 @@ Three nodes
 
 This is an example of installing PostgreSQL, OMERO.server and OMERO.web on separate nodes.
 
-- `cd three-nodes; ansible-playbook playbook.yml`
-
-Alternatively, use docker-compose to run a similar configuration in docker:
-
-- `cd three-nodes; docker-compose up`
+    cd ansible-role-omero-three-nodes
+    ansible-galaxy install -r requirements.yml
+    ansible-playbook playbook.yml
 
 ![three node installation of OMERO](images/three-nodes.png "Three-node OMERO")
