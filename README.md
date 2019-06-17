@@ -33,7 +33,7 @@ installation blueprints for this configuration as well as more advanced ones:
 
 ### Public user
 
-<img src="images/public-user.png" alt="OMERO with public user" width="30%" align="left"/>
+<img src="images/public-user.png" alt="OMERO with public user" width="30%"/>
 
 This recreates the configuration documented in the OMERO.web [documentation](https://docs.openmicroscopy.org/latest/omero/sysadmins/public.html)
 
@@ -44,7 +44,7 @@ This recreates the configuration documented in the OMERO.web [documentation](htt
 
 ### Three nodes
 
-<img src="images/three-nodes.png" alt="Three-nodes OMERO" width="40%" align="left"/>
+<img src="images/three-nodes.png" alt="Three-nodes OMERO" width="40%"/>
 
 This is an example of installing PostgreSQL, OMERO.server and OMERO.web on separate nodes.
 
