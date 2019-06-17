@@ -18,7 +18,7 @@ Install OMERO.server and OMERO.web using one of these playbooks:
 
 ### Basics
 
-<img src="images/one-node.png" alt="One-node OMERO" width="30%" align="left"/>
+<img src="images/one-node.png" alt="One-node OMERO" width="30%"/>
 
     cd ansible-example-omero-onenode
     ansible-galaxy install -r requirements.yml
