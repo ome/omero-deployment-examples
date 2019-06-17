@@ -19,7 +19,7 @@ Basics
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
-![single node installation of OMERO.web, OMERO.server, and PostgreSQL](images/one-node.png "One-node OMERO")
+<img src="images/one-node.png" alt="One-node OMERO" width="40%" align="left"/>
 
 The above diagram represents the most basic OMERO installation with OMERO.web, OMERO.server, and
 PostgreSQL all installed on the same physical node. This repository includes ansible and docker
@@ -38,7 +38,7 @@ This recreates the configuration documented under https://docs.openmicroscopy.or
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
-![single node installation with public user enabled](images/public-user.png "OMERO with public-user")
+<img src="images/public-user.png" alt="OMERO with public user" width="40%" align="left"/>
 
 Three nodes
 -----------
@@ -54,4 +54,4 @@ Alternatively, use docker-compose to run a similar configuration in Docker:
     cd docker-example-omero
     docker-compose up
 
-![three node installation of OMERO](images/three-nodes.png "Three-node OMERO")
+<img src="images/three-nodes.png" alt="Three-nodes OMERO" width="40%" align="left"/>
