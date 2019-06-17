@@ -6,14 +6,19 @@ You can copy these and modify them for your own use.
 
 
 Quick start
-===========
+-----------
 
-- Install Ansible: e.g. `pip install ansible>=2.6.16,<2.7`. Other versions of Ansible may work but are not routinely tested by us.
-- Install OMERO.server and OMERO.web using one of these playbooks:
+Install:
 
+-   either Ansible: e.g. `pip install ansible>=2.6.16,<2.7`. Other versions of 
+    Ansible may work but are not routinely tested by us.
+-   or [Docker](https://docs.docker.com/install/) and docker-compose e.g.
+    `pip install docker-compose`
+
+Install OMERO.server and OMERO.web using one of these playbooks:
 
 Basics
-------
+^^^^^^
 
     cd ansible-example-omero-onenode
     ansible-galaxy install -r requirements.yml
@@ -29,7 +34,7 @@ installation blueprints for this configuration as well as more advanced ones:
  * [Three nodes](#three-nodes): use more physical or virtual hardware to scale up your installation
 
 Public user
------------
+^^^^^^^^^^^
 
 This recreates the configuration documented under https://docs.openmicroscopy.org/latest/omero/sysadmins/public.html
 
@@ -41,7 +46,7 @@ This recreates the configuration documented under https://docs.openmicroscopy.or
 <img src="images/public-user.png" alt="OMERO with public user" width="40%" align="left"/>
 
 Three nodes
------------
+^^^^^^^^^^^
 
 This is an example of installing PostgreSQL, OMERO.server and OMERO.web on separate nodes.
 
@@ -49,7 +54,7 @@ This is an example of installing PostgreSQL, OMERO.server and OMERO.web on separ
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
-Alternatively, use docker-compose to run a similar configuration in Docker:
+Alternatively, use `docker-compose` to run a similar configuration in Docker:
 
     cd docker-example-omero
     docker-compose up
