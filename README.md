@@ -49,4 +49,9 @@ This is an example of installing PostgreSQL, OMERO.server and OMERO.web on separ
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
+Alternatively, use docker-compose to run a similar configuration in Docker:
+
+    cd docker-example-omero
+    docker-compose up
+
 ![three node installation of OMERO](images/three-nodes.png "Three-node OMERO")
