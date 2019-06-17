@@ -8,7 +8,7 @@ You can copy these and modify them for your own use.
 Quick start
 ===========
 
-- Install Ansible: e.g. `pip install ansible`
+- Install Ansible: e.g. `pip install ansible>=2.6.16,<2.7`. Other versions of Ansible may work but are not routinely tested by us.
 - Install OMERO.server and OMERO.web using one of these playbooks:
 
 
