@@ -5,3 +5,12 @@
 [submodule "ansible-example-omero-onenode"]
 	path = ansible-example-omero-onenode
 	url = git://github.com/ome/ansible-example-omero-onenode.git
+[submodule "ansible-example-omero-public-user"]
+	path = ansible-example-omero-public-user
+	url = git://github.com/ome/ansible-example-omero-public-user.git
+[submodule "ansible-example-omero-three-nodes"]
+	path = ansible-example-omero-three-nodes
+	url = git://github.com/ome/ansible-example-omero-three-nodes.git
+[submodule "docker-example-omero"]
+	path = docker-example-omero
+	url = git://github.com/ome/docker-example-omero
