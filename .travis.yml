@@ -15,6 +15,7 @@ env:
   - PLAYBOOKDIR=ansible-example-omero-onenode
   - PLAYBOOKDIR=ansible-example-omero-public-user
   - PLAYBOOKDIR=ansible-example-omero-three-nodes
+  - PLAYBOOKDIR=ansible-example-omero-addons
 
 # Docker-only
 # - PLAYBOOKDIR=docker-example-omero-websockets
