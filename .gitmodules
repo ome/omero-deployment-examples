@@ -20,3 +20,6 @@
 [submodule "docker-example-omero-ldap"]
 	path = docker-example-omero-ldap
 	url = git://github.com/ome/docker-example-omero-ldap
+[submodule "ansible-example-omero-addons"]
+	path = ansible-example-omero-addons
+	url = git://github.com/ome/ansible-example-omero-addons
