@@ -9,13 +9,14 @@ install:
   - pip install ome-ansible-molecule
 
 script:
-  - cd $PLAYBOOKDIR && molecule test
+  - cd $PLAYBOOKDIR && molecule test -s $SCENARIO
 
 env:
-  - PLAYBOOKDIR=ansible-example-omero-onenode
-  - PLAYBOOKDIR=ansible-example-omero-public-user
-  - PLAYBOOKDIR=ansible-example-omero-three-nodes
-  - PLAYBOOKDIR=ansible-example-omero-addons
+  - PLAYBOOKDIR=ansible-example-omero-onenode SCENARIO=default
+  - PLAYBOOKDIR=ansible-example-omero-public-user SCENARIO=default
+  - PLAYBOOKDIR=ansible-example-omero-three-nodes SCENARIO=default
+  - PLAYBOOKDIR=ansible-example-omero-addons SCENARIO=centos7
+  - PLAYBOOKDIR=ansible-example-omero-addons SCENARIO=ubuntu1804
 
 # Docker-only
 # - PLAYBOOKDIR=docker-example-omero-websockets
