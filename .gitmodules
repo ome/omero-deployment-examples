@@ -23,3 +23,6 @@
 [submodule "ansible-example-omero-addons"]
 	path = ansible-example-omero-addons
 	url = git://github.com/ome/ansible-example-omero-addons
+[submodule "docker-example-omero-microservices"]
+	path = docker-example-omero-microservices
+	url = https://github.com/ome/docker-example-omero-microservices
