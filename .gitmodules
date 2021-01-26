@@ -26,3 +26,6 @@
 [submodule "docker-example-omero-microservices"]
 	path = docker-example-omero-microservices
 	url = https://github.com/ome/docker-example-omero-microservices
+[submodule "docker-example-omero-grid"]
+	path = docker-example-omero-grid
+	url = git://github.com/ome/docker-example-omero-grid
