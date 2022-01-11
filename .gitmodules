@@ -1,31 +1,31 @@
 [submodule "docker-example-omero-websockets"]
 	path = docker-example-omero-websockets
-	url = git://github.com/ome/docker-example-omero-websockets.git
+	url = https://github.com/ome/docker-example-omero-websockets.git
 
 [submodule "ansible-example-omero-onenode"]
 	path = ansible-example-omero-onenode
-	url = git://github.com/ome/ansible-example-omero-onenode.git
+	url = https://github.com/ome/ansible-example-omero-onenode.git
 [submodule "ansible-example-omero-public-user"]
 	path = ansible-example-omero-public-user
-	url = git://github.com/ome/ansible-example-omero-public-user.git
+	url = https://github.com/ome/ansible-example-omero-public-user.git
 [submodule "ansible-example-omero-three-nodes"]
 	path = ansible-example-omero-three-nodes
-	url = git://github.com/ome/ansible-example-omero-three-nodes.git
+	url = https://github.com/ome/ansible-example-omero-three-nodes.git
 [submodule "docker-example-omero"]
 	path = docker-example-omero
-	url = git://github.com/ome/docker-example-omero
+	url = https://github.com/ome/docker-example-omero
 [submodule "docker-example-omero-readonly"]
 	path = docker-example-omero-readonly
-	url = git://github.com/ome/docker-example-omero-readonly
+	url = https://github.com/ome/docker-example-omero-readonly
 [submodule "docker-example-omero-ldap"]
 	path = docker-example-omero-ldap
-	url = git://github.com/ome/docker-example-omero-ldap
+	url = https://github.com/ome/docker-example-omero-ldap
 [submodule "ansible-example-omero-addons"]
 	path = ansible-example-omero-addons
-	url = git://github.com/ome/ansible-example-omero-addons
+	url = https://github.com/ome/ansible-example-omero-addons
 [submodule "docker-example-omero-microservices"]
 	path = docker-example-omero-microservices
 	url = https://github.com/ome/docker-example-omero-microservices
 [submodule "docker-example-omero-grid"]
 	path = docker-example-omero-grid
-	url = git://github.com/ome/docker-example-omero-grid
+	url = https://github.com/ome/docker-example-omero-grid
