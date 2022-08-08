@@ -34,7 +34,7 @@ PostgreSQL all installed on the same physical node.
 
 ### Public user
 
-    cd ansible-role-omero-public-user
+    cd ansible-example-omero-public-user
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
@@ -44,7 +44,7 @@ This recreates the configuration documented in the OMERO.web [documentation](htt
 
 ### Three nodes
 
-    cd ansible-role-omero-three-nodes
+    cd ansible-example-omero-three-nodes
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
