@@ -9,8 +9,7 @@ You can copy these and modify them for your own use.
 
 Install the prerequisites:
 
--   either Ansible: e.g. `pip install ansible>=2.6.16,<2.7`. Other versions of 
-    Ansible may work but are not routinely tested by us.
+-   either Ansible: e.g. `pip install ansible`. At the time of writing, the ansible-core version was ``2.11.12``. Other versions of Ansible may work but are not routinely tested by us.
 -   or [Docker](https://docs.docker.com/install/) and docker-compose e.g.
     `pip install docker-compose`
 
@@ -34,7 +33,7 @@ PostgreSQL all installed on the same physical node.
 
 ### Public user
 
-    cd ansible-role-omero-public-user
+    cd ansible-example-omero-public-user
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
@@ -44,7 +43,7 @@ This recreates the configuration documented in the OMERO.web [documentation](htt
 
 ### Three nodes
 
-    cd ansible-role-omero-three-nodes
+    cd ansible-example-omero-three-nodes
     ansible-galaxy install -r requirements.yml
     ansible-playbook playbook.yml
 
