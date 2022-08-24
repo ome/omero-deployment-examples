@@ -9,8 +9,7 @@ You can copy these and modify them for your own use.
 
 Install the prerequisites:
 
--   either Ansible: e.g. `pip install ansible`. At the time of writing, the Ansible version was 2.13.2. Other versions of 
-    Ansible may work but are not routinely tested by us.
+-   either Ansible: e.g. `pip install ansible`. At the time of writing, the ansible-core version was ``2.11.12``. Other versions of Ansible may work but are not routinely tested by us.
 -   or [Docker](https://docs.docker.com/install/) and docker-compose e.g.
     `pip install docker-compose`
 
